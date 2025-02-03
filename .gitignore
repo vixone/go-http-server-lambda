@@ -14,7 +14,7 @@ pkg/
 *.swp
 
 # Terraform files
-.terraform/
+.terraform*
 terraform.tfstate*
 terraform.tfvars
 *.backup
