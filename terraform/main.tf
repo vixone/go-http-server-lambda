@@ -5,10 +5,10 @@ provider "aws" {
 resource "aws_lambda_function" "go_lambda" {
   function_name    = "go_lambda_function"
   role            = aws_iam_role.lambda_exec.arn
-  handler         = "go-server"
+  handler         = "main"
   runtime         = "go1.x"
-  filename        = "go-server.zip"
-  source_code_hash = filebase64sha256("go-server.zip")
+  filename        = "lambda.zip"
+  source_code_hash = filebase64sha256("main.zip")
 }
 
 resource "aws_iam_role" "lambda_exec" {
